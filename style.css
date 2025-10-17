@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Aoboshi+One&family=Bitcount+Prop+Single:wght@100..900&family=Jersey+15&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@300..700&family=VT323&display=swap');
+:root{
+    background-color: #dcdcdc;
+}
+h1{
+     font-family: "Space Grotesk", sans-serif;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
