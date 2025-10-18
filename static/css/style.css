@@ -12,6 +12,13 @@ h1 {
   display: flex;
   justify-content: center;
 }
+@media (max-width:480px) {
+  .firstpage h1{
+   font-size: 30px;
+   font-weight: 20vh;
+  }
+  
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -54,12 +61,23 @@ h1 {
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .submit:hover {
   background-color: #dcdcdc;
   color: black;
   transform: scale(1.05); 
+  border:2px solid black;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:20px;
 }
 
 
@@ -74,6 +92,7 @@ footer {
   display: flex;
   justify-content: right; 
   align-items: center;
+  height: 25px;
 }
 
 footer p {
@@ -81,6 +100,8 @@ footer p {
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
+  font-family: 'Consolas', 'Monaco', monospace;
+  
 }
 
 footer img {
