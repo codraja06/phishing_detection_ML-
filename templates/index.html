@@ -19,14 +19,15 @@
     
   
   </div>
- <div class="content"></div>
- <div class="search">
-  <input id="searchbox" type="search" placeholder="Enter the URL">
- </div>
- <div class="submit">
-  <button>Submit</button>
- </div>
+<form action="backend/app.py" method="POST" class="content">
+  <div class="search">
+    <label for="url"></label>
+    <input id="url" type="url" name="url" placeholder="Enter the URL" required>
   </div>
+
+  <input class="submit" type="submit" value="Submit">
+</form>
+
   
   <div class="contact">
     <div class="contact2"><h2>Any Queries</h2>
