@@ -47,13 +47,13 @@ h1 {
 }
 .submit button {
   background-color: black;
-  color: aqua;
+  color: #dcdcdc;
   width: 100px;
   height: 40px;
   border-radius: 10px;
 }
 .submit button:hover {
-  background-color: aqua;
+  background-color: #dcdcdc;
   color: black;
   transition: ease-in-out 0.5s;
   padding: 10px;
@@ -88,3 +88,51 @@ footer img {
 section {
   min-height: 89vh;
 }
+.social-networks {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-networks li a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: transform 0.5s ease, background 0.3s;
+}
+
+.social-networks li a:hover {
+  transform: rotate(360deg);
+  background: #007bff;
+}
+
+.icon-github::before {
+  content: "";
+  font-family: "Font Awesome 5 Brands";
+}
+
+.icon-portfolio::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.contact h2{
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.contact{
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
