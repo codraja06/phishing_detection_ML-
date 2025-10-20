@@ -125,6 +125,3 @@ Typical features extracted for prediction include:
 * **Portfolio:** [Your Portfolio](https://codwolf-7c928.web.app/)
 * **GitHub:** [codraja06](https://github.com/codraja06)
 
-## 📜 License
-
-This project is licensed under the MIT License. See `LICENSE.md` for details.
