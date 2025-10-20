@@ -80,6 +80,43 @@ h1 {
   gap:20px;
 }
 
+#resultArea {
+  margin-top: 25px;
+  text-align: center;
+}
+
+#resultText {
+    font-family: "Space Grotesk", sans-serif;
+  display: inline-block;
+  font-size: 1.4rem;        
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #e9ecef;  
+  color: #222;               
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+.result-visible #resultText {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#resultText.suspicious {
+  background-color: #ffcccc;   
+  color: #b30000;             
+}
+
+#resultText.legit {
+  background-color: #ccffcc;   
+  color: #006600;             
+}
+
 
 footer {
   width: 100%;

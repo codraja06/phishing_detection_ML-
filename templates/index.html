@@ -28,11 +28,18 @@
       </form>
 
       <!-- Result Display -->
-      <div id="resultArea" aria-live="polite" style="margin-top:18px;">
-        {% if result %}
-          <h2 id="resultText">{{ result }}</h2>
-        {% endif %}
-      </div>
+      <div id="resultArea"
+     class="{% if result %}result-visible{% endif %}"
+     aria-live="polite">
+  {% if result %}
+    {% if 'SUSPICIOUS' in result %}
+      <h2 id="resultText" class="suspicious">{{ result }}</h2>
+    {% else %}
+      <h2 id="resultText" class="legit">{{ result }}</h2>
+    {% endif %}
+  {% endif %}
+</div>
+
 
       <!-- Contact Section -->
       <div class="contact">
@@ -60,5 +67,14 @@
   <footer>
     <p>codwolf@phishingdetectionML</p>
   </footer>
+  <script>
+    const urlInput = document.getElementById('url');
+    if (urlInput) {
+      urlInput.addEventListener('input', () => {
+        const resultNode = document.getElementById('resultText');
+        if (resultNode) resultNode.style.display = 'none';
+      });
+    }
+  </script>
 </body>
 </html>

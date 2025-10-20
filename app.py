@@ -47,9 +47,9 @@ def predict():
         prediction = model.predict([features])[0]
 
         if str(prediction) == "1" or str(prediction).lower() in ['phish', 'malicious', 'suspicious']:
-            output = f"The given website is SUSPICIOUS."
+            output = f"({url}) is SUSPICIOUS."
         else:
-            output = f"The given website looks LEGITIMATE."
+            output = f"({url}) is LEGITIMATE."
 
     except Exception as e:
         output = f"Prediction failed: {e}"
