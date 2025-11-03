@@ -1,6 +1,6 @@
 # Phishing Detection
 
-<img width="1913" height="1003" alt="image" src="https://github.com/user-attachments/assets/fa3e9a47-bade-43a5-aa8a-af370db68903" />
+<img width="1916" height="1006" alt="image" src="https://github.com/user-attachments/assets/7169ed70-fc8e-4d03-9ad4-e23f52d89923" />
  <!-- Replace '#' with a direct link to your application screenshot or GIF -->
 
 This project implements a web-based tool for real-time phishing detection using a machine learning model integrated via the Flask framework. Users can input a URL and instantly receive a prediction on whether the link is legitimate or a potential phishing attempt, making machine learning accessible for practical cybersecurity awareness.
