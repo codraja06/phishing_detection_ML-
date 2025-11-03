@@ -1,4 +1,4 @@
-# Phishing Detection Using Machine Learning
+# Phishing Detection
 
 <img width="1913" height="1003" alt="image" src="https://github.com/user-attachments/assets/fa3e9a47-bade-43a5-aa8a-af370db68903" />
  <!-- Replace '#' with a direct link to your application screenshot or GIF -->
@@ -7,21 +7,23 @@ This project implements a web-based tool for real-time phishing detection using 
 
 ## 🚀 Key Features
 
-* **Phishing URL Detection:** Uses a pre-trained scikit-learn model to classify URLs as Legitimate or Phishing.
-* **User-Friendly Web Interface:** Clean, responsive HTML/CSS interface for both desktop and mobile devices.
-* **Dynamic Result Display:** Result message (Legitimate/Suspicious) appears **only after input submission**, hidden by default.
-* **Enhanced Styling:** Result box styled with color-coded feedback (green for legitimate, red for suspicious) and smooth fade-in animation.
-* **Seamless Model Integration:** Production-ready approach to serve a machine learning model (.pkl file) via Python backend.
-* **Real-Time Prediction:** Provides instantaneous feedback on URL submissions.
-* **Responsive Design:** Optimized for all devices, from mobile to desktop.
+Phishing URL Detection: Detects and classifies URLs as Legitimate or Suspicious based on URL patterns.
 
+User-Friendly Web Interface: Clean, responsive HTML/CSS design for both desktop and mobile devices.
+
+Dynamic Result Display: Result appears only after submission, hidden by default.
+
+Color-Coded Feedback: Green for legitimate sites, red for suspicious links.
+
+Real-Time Analysis: Instant result after entering the URL.
+
+Responsive Design: Optimized layout for all screen sizes.
 ## ⚙️ Technologies Used
 
 | Category         | Technology   | Purpose                                             |
 | ---------------- | ------------ | --------------------------------------------------- |
 | Backend & ML     | Python 3.x   | Core logic, data processing, ML model handling      |
 | Web Framework    | Flask        | Application routing and backend functionality       |
-| Machine Learning | scikit-learn | Training, serialization, and serving the classifier |
 | Frontend         | HTML & CSS   | Structure and styling of the interface              |
 | Assets           | Font Awesome | Icons and visual enhancements                       |
 
@@ -30,9 +32,7 @@ This project implements a web-based tool for real-time phishing detection using 
 ```
 phishing_detection_ml/
 │
-├── app.py                 # Flask backend logic and routing
-├── model/
-│   └── model.pkl          # Pre-trained ML classification model (or mode.pkl)
+├── app.py                 # Flask backend logic and routing    
 ├── templates/
 │   └── index.html         # Frontend template (updated result display logic)
 ├── static/
@@ -54,7 +54,7 @@ phishing_detection_ml/
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/phishing-detection-ml.git
+git clone https://github.com/codraja06/phishing-detection-ml.git
 cd phishing-detection-ml
 ```
 
@@ -73,10 +73,6 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-
-Ensure the model is present:
-
-* Verify that `model.pkl` is inside the `model/` directory. A fallback to `mode.pkl` is supported.
 
 ### Running the Application
 
@@ -125,20 +121,6 @@ http://127.0.0.1:5000/
 2. Enter any website URL in the input field.
 3. Click **Submit**.
 4. View the prediction result (Legitimate or Suspicious) displayed dynamically.
-
-## 🧠 Model Details
-
-The application uses a trained machine learning model (`phishing.pkl`) built on a dataset of labeled phishing and legitimate URLs.
-
-Typical features extracted for prediction include:
-
-* URL length
-* Number of subdomains
-* Presence of `@`, `-`, or multiple `//`
-* Presence of words like `login`, `secure`, or numeric patterns
-* Whether `https` is used
-
-> Note: `phishing.pkl` contains both feature extraction and the trained classifier (e.g., Random Forest).
 
 ## 🔧 Recent Updates
 
