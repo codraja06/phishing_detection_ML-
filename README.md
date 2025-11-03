@@ -32,7 +32,7 @@ phishing_detection_ml/
 │
 ├── app.py                 # Flask backend logic and routing
 ├── model/
-│   └── phishing.pkl       # Pre-trained ML classification model
+│   └── model.pkl          # Pre-trained ML classification model (or mode.pkl)
 ├── templates/
 │   └── index.html         # Frontend template (updated result display logic)
 ├── static/
@@ -76,14 +76,41 @@ pip install -r requirements.txt
 
 Ensure the model is present:
 
-* Verify that `phishing.pkl` is inside the `model/` directory.
+* Verify that `model.pkl` is inside the `model/` directory. A fallback to `mode.pkl` is supported.
 
 ### Running the Application
 
-Start the Flask server:
+Start the Flask server (local development):
 
 ```bash
 python app.py
+Alternatively, if deploying with Procfile (e.g., Render/Heroku), the command is:
+
+```
+gunicorn app:app
+```
+
+### API
+
+JSON endpoint for programmatic checks:
+
+```
+POST /analyze
+{
+  "url": "http://example.com"
+}
+```
+
+Response:
+
+```
+{
+  "success": true,
+  "url": "http://example.com",
+  "result": "Legal",
+  "is_phishing": false
+}
+```
 ```
 
 Access the application in your browser:
