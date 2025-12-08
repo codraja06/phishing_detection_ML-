@@ -1,23 +1,27 @@
-# Phishing Detection
+# 🎣 Phishing Detection
 
+   This project is a web-based tool that checks whether a given URL is safe or suspicious. Users can enter any website link, and the system quickly analyzes it and shows if it might be a phishing site. This helps people stay safer online by avoiding fake or harmful websites.
+
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-None-red)
+![Stars](https://img.shields.io/github/stars/codraja06/phishing_detection_ML-?style=social)
+![Forks](https://img.shields.io/github/forks/codraja06/phishing_detection_ML-?style=social)
+
+---
+## Preview
 <img width="1916" height="1006" alt="image" src="https://github.com/user-attachments/assets/7169ed70-fc8e-4d03-9ad4-e23f52d89923" />
  <!-- Replace '#' with a direct link to your application screenshot or GIF -->
 
-This project implements a web-based tool for real-time phishing detection using a machine learning model integrated via the Flask framework. Users can input a URL and instantly receive a prediction on whether the link is legitimate or a potential phishing attempt, making machine learning accessible for practical cybersecurity awareness.
 
-## 🚀 Key Features
+## ✨ Features
 
-Phishing URL Detection: Detects and classifies URLs as Legitimate or Suspicious based on URL patterns.
+*   🧠 **Intelligent Detection:** Leverages advanced machine learning models to accurately classify URLs and content as legitimate or phishing.
+*   ⚡ **Real-time Analysis:** Provides rapid feedback on submitted links, minimizing exposure time to malicious sites.
+*   🌐 **Web-based Interface:** User-friendly web application built with Python (Flask) for easy interaction and URL submission.
+*   🛠️ **Extensible Architecture:** Designed with modularity in mind, allowing for easy integration of new models or data sources.
+*   📈 **Performance Monitoring:** Includes `.snapshots` directory for potential model versioning or performance tracking.
 
-User-Friendly Web Interface: Clean, responsive HTML/CSS design for both desktop and mobile devices.
-
-Dynamic Result Display: Result appears only after submission, hidden by default.
-
-Color-Coded Feedback: Green for legitimate sites, red for suspicious links.
-
-Real-Time Analysis: Instant result after entering the URL.
-
-Responsive Design: Optimized layout for all screen sizes.
 ## ⚙️ Technologies Used
 
 | Category         | Technology   | Purpose                                             |
@@ -43,79 +47,61 @@ phishing_detection_ml/
 └── requirements.txt       # Python dependencies
 ```
 
-## 🏁 Getting Started
+
+## 🚀 Installation Guide
+
+Follow these steps to get the Phishing Detection ML- project up and running on your local machine.
 
 ### Prerequisites
 
-* Python 3.6+ installed on your system.
+Ensure you have Python 3.8+ and `pip` installed.
 
-### Installation
+### Step-by-Step Installation
 
-Clone the repository:
+1.  **Clone the Repository:**
+    Start by cloning the project repository to your local machine:
 
-```bash
-git clone https://github.com/codraja06/phishing-detection-ml.git
-cd phishing-detection-ml
-```
+    ```bash
+    git clone https://github.com/codraja06/phishing_detection_ML-.git
+    cd phishing_detection_ML-
+    ```
 
-Create and activate a virtual environment (recommended):
+2.  **Create a Virtual Environment:**
+    It's highly recommended to use a virtual environment to manage project dependencies:
 
-```bash
-python3 -m venv venv
-# On Linux/macOS
-source venv/bin/activate
-# On Windows
-.\venv\Scripts\activate
-```
+    ```bash
+    python -m venv venv
+    ```
 
-Install dependencies:
+3.  **Activate the Virtual Environment:**
+    *   **On macOS/Linux:**
 
-```bash
-pip install -r requirements.txt
-```
+        ```bash
+        source venv/bin/activate
+        ```
 
-### Running the Application
+    *   **On Windows:**
 
-Start the Flask server (local development):
+        ```bash
+        .\venv\Scripts\activate
+        ```
 
-```bash
-python app.py
-Alternatively, if deploying with Procfile (e.g., Render/Heroku), the command is:
+4.  **Install Dependencies:**
+    Install all required Python packages using `pip`:
 
-```
-gunicorn app:app
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-### API
+5.  **Run the Application:**
+    Once all dependencies are installed, you can start the Flask web application:
 
-JSON endpoint for programmatic checks:
-
-```
-POST /analyze
-{
-  "url": "http://example.com"
-}
-```
-
-Response:
-
-```
-{
-  "success": true,
-  "url": "http://example.com",
-  "result": "Legal",
-  "is_phishing": false
-}
-```
-```
-
-Access the application in your browser:
-
-```
-http://127.0.0.1:5000/
-```
-
-### 👩‍💻 Usage
+    ```bash
+    python app.py
+    ```
+    The application will typically run on `http://127.0.0.1:5000/`.
+---
+## 👩‍💻 Usage
 
 1. Open the application in your browser.
 2. Enter any website URL in the input field.
@@ -133,4 +119,3 @@ http://127.0.0.1:5000/
 
 * **Portfolio:** [Your Portfolio](https://codwolf-7c928.web.app/)
 * **GitHub:** [codraja06](https://github.com/codraja06)
-
